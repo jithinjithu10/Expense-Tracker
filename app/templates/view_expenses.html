@@ -1,0 +1,19 @@
+<!-- app/templates/view_expenses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Expenses</title>
+</head>
+<body>
+    <h1>Your Expenses</h1>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
